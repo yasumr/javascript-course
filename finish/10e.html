@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: rgb(230, 230, 230);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="button1"
+      onclick="
+    const buttonElement1 = document.querySelector('.button1');
+    if (buttonElement1.classList.contains('is-toggled')) {
+      buttonElement1.classList.remove('is-toggled');
+    } else {
+      buttonElement1.classList.add('is-toggled');
+    }
+  
+    console.log(document.querySelector('.button'));"
+    >
+      Gaming
+    </button>
+    <button
+      class="button2"
+      onclick="
+       const buttonElement2 = document.querySelector('.button2');
+       if (buttonElement2.classList.contains('is-toggled')) {
+         buttonElement2.classList.remove('is-toggled');
+       } else {
+         buttonElement2.classList.add('is-toggled');
+       }
+     
+       console.log(document.querySelector('.button'));"
+    >
+      Music
+    </button>
+    <button
+      class="button3"
+      onclick="
+          const buttonElement3 = document.querySelector('.button3');
+          if (buttonElement3.classList.contains('is-toggled')) {
+            buttonElement3.classList.remove('is-toggled');
+          } else {
+            buttonElement3.classList.add('is-toggled');
+          }
+        
+          console.log(document.querySelector('.button'));"
+    >
+      Tech
+    </button>
+  </body>
+  <script>
+    console.log(document.querySelector(".button"));
+  </script>
+</html>

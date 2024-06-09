@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        const result = [];
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === 'egg') {
+            continue;
+          } else {
+            result.push(foods[i]);
+          }
+        }
+        return result;
+      }
+      const myResult = removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+      console.log(myResult);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const myArray = ["hello", "world", "search", "good"];
+      let index = -1;
+      function findSearch(array, index) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === "search") {
+            index = i;
+          }
+        }
+        return index;
+      }
+      const result = findSearch(myArray, index);
+      console.log(result);
+      const myArray2 = ['not', 'found'];
+      const result2 = findSearch(myArray2, index);
+      console.log(result2);
+    </script>
+  </body>
+</html>

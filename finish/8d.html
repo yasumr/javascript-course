@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const product1 = {
+        name: "earphone",
+        price: 30
+      };
+
+      const product2 = {
+        name: "iphone",
+        price: 1100
+      };
+
+      function comparePrice(p1, p2) {
+        const result = p1.price > p2.price ? p2 : p1;
+        return result;
+      }
+
+     console.log(comparePrice(product1, product2));
+    </script>
+  </body>
+</html>
