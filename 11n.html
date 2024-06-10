@@ -3,13 +3,38 @@
   <head></head>
   <body>
     <script>
+      // function countWords(words) {
+      //   const result = {};
+      //   result[words[0]] = 0;
+      //   for (let i = 0; i < words.length; i++) {
+      //     if (result[words[i]] === undefined) {
+      //       result[words[i]] = 1;
+      //     } else {
+      //       result[words[i]]++;
+      //     }
+      //   }
+      //   console.log(result['apple'])
+      //   console.log('result =',result)
+      // }
+      // countWords(['apple', 'grape', 'apple', 'apple']);
+
       function countWords(words) {
+        const result = [];
         for (let i = 0; i < words.length; i++) {
-          const result = words[i];
-          console.log(typeof result);
+          const word = words[i]
+          // console.log(word);
+          if (!result[word]) {
+            result[word] = 1;
+            // console.log('true');
+            // console.log(result);
+          } else {
+            result[word]++;
+            // console.log('false');
+          }
         }
+        return result;
       }
-      countWords(['apple', 'grape', 'apple', 'apple']);
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
     </script>
   </body>
 </html>

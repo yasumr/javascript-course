@@ -6,10 +6,10 @@
       function unique(array) {
         const result = [];
         for (let i = 0; i < array.length; i++) {
-          const index = findIndex(array, array[i]);
-          result.push(array[index]);
-          console.log(result);
+          const idx = findIndex(array, array[i])
+          result[idx] = array[i];
         }
+        console.log(result);
       }
 
       function findIndex(array, word) {
@@ -25,6 +25,7 @@
       }
 
       unique(["green", "red", "blue", "red"]);
+      unique(['red', 'green', 'green', 'red']);
 
       // const result = findIndex(['green', 'red', 'blue', 'red'], 'red');
       // console.log(result);
