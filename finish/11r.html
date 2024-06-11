@@ -3,19 +3,18 @@
   <head></head>
   <body>
     <script>
+      const result = [];
+
       function removeEgg(foods) {
-        const result = [];
         for (let i = 0; i < foods.length; i++) {
           if (foods[i] === 'egg') {
             continue;
-          } else {
-            result.push(foods[i]);
           }
+          result.push(foods[i]);
         }
         return result;
       }
-      const myResult = removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
-      console.log(myResult);
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
     </script>
   </body>
 </html>
