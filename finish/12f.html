@@ -2,24 +2,26 @@
 <html>
   <head></head>
   <body>
-      <button class="add-to-cart-button" onclick="
-      changeText();
-      console.log(timeoutId);
-      ">Add to cart</button>
+      <button class="add-to-cart-button js-add-to-cart-button">Add to cart</button>
       <p class="js-message"></p>
  
     <script>
       let messageElement = document.querySelector('.js-message');
 
       let timeoutId;
-      function changeText() {
+      const changeText = () => {
         clearTimeout(timeoutId);
         messageElement.innerHTML = 'Added';
-        timeoutId = setTimeout(function() {
+        timeoutId = setTimeout(() => {
           console.log(timeoutId);
           messageElement.innerHTML = '';
         }, 2000);
       }
+
+      document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
+        changeText();
+        console.log(timeoutId);
+      });
     </script>
   </body>
 </html>

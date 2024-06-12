@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <hear>
+    <title class="header">App</title>
+  </head>
+  <body>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
+    <script>
+      let messages = 2;
+      let intervalId;
+
+      const startChangingTitle = () => {
+        if (messages < 1) {
+        document.title = 'App';
+        } else {
+        intervalId = setInterval(() => {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New message`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000)
+      }
+      }
+
+      document.querySelector('.js-add-button').addEventListener('click', () => {
+        messages++;
+        startChangingTitle();
+        console.log(messages);
+      });
+
+      document.querySelector('.js-remove-button').addEventListener('click', () => {
+      if (messages > 1) {
+        messages--;
+      } else if (messages === 1){
+        messages--;
+      startChangingTitle();
+        clearInterval(intervalId);
+      } else {
+        startChangingTitle();
+        clearInterval(intervalId);
+      }
+      console.log(messages);
+      
+      })
+
+        
+    </script>
+  </body>
+</html>
